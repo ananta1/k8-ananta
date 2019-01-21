@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-meta
+  namespace: default
+spec:
+  containers:
+  - name: nginx-first
+    image: nginx
+    imagePullPolicy: IfNotPresent
+  restartPolicy: Always    

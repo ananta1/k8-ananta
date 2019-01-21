@@ -1,0 +1,13 @@
+apiVersion : v1
+kind : Pod
+metadata:
+  name: busy-box-ananta
+spec:
+  containers:
+  - name : busybox
+    image : busybox
+    command:
+    - echo 
+    - hello
+
+

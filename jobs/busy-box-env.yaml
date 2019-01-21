@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: env-test
+spec:
+  template:
+    spec:
+      containers:
+      - name: busybox
+        image: busybox
+        command: ["env" ]
+        env :
+        - name : STUDENT_NAME
+          value: "Ananta" 
+        - name : SCHOOL
+          value: "Linux Academy"
+        - name : KUBERNETES
+          value : "is awesome"  
+      restartPolicy: Never
+  backoffLimit: 4
+      

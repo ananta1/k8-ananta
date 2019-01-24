@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:      
+    running: afterLabels  
+  name: alpine-withlabels
+  namespace: default
+spec:
+  containers:
+  - name: alpine
+    image: alpine
+    command:
+      - sleep
+      - "3600"  	
+    imagePullPolicy: IfNotPresent
+  restartPolicy: Always    
